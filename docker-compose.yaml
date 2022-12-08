@@ -1,0 +1,31 @@
+version: '3.3'
+
+services:
+  database:
+    image: postgres
+    container_name: database-container
+    restart: unless-stopped
+    ports:
+      - "5432:5432"
+    environment:
+      POSTGRES_USER: ${POSTGRES_USER:-postgres}
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:-changeme}
+      PGDATA: /data/postgres
+
+  frontend:
+    build:
+      context: ./fazumbem-frontend-tcc
+    image: tcc/frontend:vini
+    container_name: frontend-container
+    restart: unless-stopped
+    ports:
+      - "3000:3000"
+
+  backend:
+    build:
+      context: ./fazumbem-backend-tcc
+    image: tcc/backend:vini
+    container_name: backend-container
+    restart: unless-stopped
+    ports:
+      - "8080:8080"
