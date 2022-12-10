@@ -6,7 +6,7 @@ then
     git clone "https://github.com/vbsantos/fazumbem-frontend-tcc.git"
     cd fazumbem-frontend-tcc
     git checkout pipeline-test
-    docker build --rm -t vbsantos-tcc/frontend:latest ./fazumbem-frontend-tcc
+    docker build --rm -t vbsantos-tcc/frontend:latest .
     cd ..
 fi
 
@@ -16,7 +16,7 @@ then
     git clone "https://github.com/vbsantos/fazumbem-backend-tcc.git"
     cd fazumbem-backend-tcc
     git checkout pipeline-test
-    docker build --rm -t vbsantos-tcc/backend:latest ./fazumbem-backend-tcc
+    docker build --rm -t vbsantos-tcc/backend:latest .
     cd ..
 fi
 
