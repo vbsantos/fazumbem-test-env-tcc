@@ -5,8 +5,9 @@ then
     echo "Building Frontend for tests"
     git clone "https://github.com/vbsantos/fazumbem-frontend-tcc.git"
     cd fazumbem-frontend-tcc
+    ls -la
     git checkout pipeline-test
-    docker build -t vbsantos-tcc/frontend:latest -f ./Dockerfile .
+    docker build --file ./Dockerfile --tag vbsantos-tcc/frontend:latest .
     cd ..
 fi
 
@@ -15,8 +16,9 @@ then
     echo "Building Backend for tests"
     git clone "https://github.com/vbsantos/fazumbem-backend-tcc.git"
     cd fazumbem-backend-tcc
+    ls -la
     git checkout pipeline-test
-    docker build -t vbsantos-tcc/backend:latest -f ./Dockerfile .
+    docker build --file ./Dockerfile --tag vbsantos-tcc/backend:latest .
     cd ..
 fi
 
