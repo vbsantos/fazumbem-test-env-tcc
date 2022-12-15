@@ -1,0 +1,8 @@
+# Cypress binary
+cypress/videos/
+
+# Cypress cache
+.cache/
+
+# Cypress module directores (installed with npm)
+node_modules/
