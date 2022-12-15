@@ -2,4 +2,4 @@
 
 echo "Running E2E Cypress tests"
 
-cd accteptance-tests/ && npm run start
+cd acceptance-tests/ && npm run start
