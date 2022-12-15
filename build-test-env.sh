@@ -1,7 +1,6 @@
 #!/bin/bash -x
 
-if [[ -z $(docker images | grep "vbsantos-tcc/frontend") ]];
-then
+if [[ -z $(docker images | grep "vbsantos-tcc/frontend") ]]; then
     echo "Building Frontend for tests"
     git clone "https://github.com/vbsantos/fazumbem-frontend-tcc.git"
     cd fazumbem-frontend-tcc
@@ -11,8 +10,7 @@ then
     cd ..
 fi
 
-if [[ -z $(docker images | grep "vbsantos-tcc/backend") ]];
-then
+if [[ -z $(docker images | grep "vbsantos-tcc/backend") ]]; then
     echo "Building Backend for tests"
     git clone "https://github.com/vbsantos/fazumbem-backend-tcc.git"
     cd fazumbem-backend-tcc
@@ -23,4 +21,5 @@ then
 fi
 
 echo "Building ENV"
+
 docker compose up --build -d

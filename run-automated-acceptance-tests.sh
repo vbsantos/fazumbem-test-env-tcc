@@ -1,5 +1,5 @@
 #!/bin/bash
 
-echo "RUNNING E2E CYPRESS TESTS"
+echo "Running E2E Cypress tests"
 
 cd accteptance-tests/ && npm run start
