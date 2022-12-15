@@ -21,7 +21,7 @@ if [[ -z $(docker images | grep "vbsantos-tcc/backend") ]]; then
 fi
 
 if ! [ -x "$(command -v npm)" ]; then
-    apt install npm
+    apt install npm -y
 fi
 
 echo "Building ENV"
