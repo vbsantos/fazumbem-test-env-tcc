@@ -20,10 +20,7 @@ if [[ -z $(docker images | grep "vbsantos-tcc/backend") ]]; then
     cd ..
 fi
 
-if ! [ -x "$(command -v npm)" ]; then
-    apt install xvfb -y
-    apt install npm -y
-fi
+apt install xvfb npm -y
 
 echo "Building ENV"
 
