@@ -4,4 +4,4 @@ echo "Running E2E Cypress tests"
 
 cd acceptance-tests/
 npm install
-npm run start --no-color
+npm run start
