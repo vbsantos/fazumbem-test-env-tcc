@@ -1,0 +1,14 @@
+{
+  "name": "acceptance-tests",
+  "version": "1.0.0",
+  "description": "Acceptance testes for project FazUmBem!",
+  "scripts": {
+    "start": "cypress run --headless",
+    "open": "cypress open"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "cypress": "^12.1.0"
+  }
+}

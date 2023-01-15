@@ -1,7 +1,6 @@
 #!/bin/bash -x
 
-if [[ -z $(docker images | grep "vbsantos-tcc/frontend") ]];
-then
+if [[ -z $(docker images | grep "vbsantos-tcc/frontend") ]]; then
     echo "Building Frontend for tests"
     git clone "https://github.com/vbsantos/fazumbem-frontend-tcc.git"
     cd fazumbem-frontend-tcc
@@ -11,8 +10,7 @@ then
     cd ..
 fi
 
-if [[ -z $(docker images | grep "vbsantos-tcc/backend") ]];
-then
+if [[ -z $(docker images | grep "vbsantos-tcc/backend") ]]; then
     echo "Building Backend for tests"
     git clone "https://github.com/vbsantos/fazumbem-backend-tcc.git"
     cd fazumbem-backend-tcc
@@ -22,6 +20,10 @@ then
     cd ..
 fi
 
-echo "Building ENV"
-docker compose up --build -d
+# install cypress required libs
+apt install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb npm -y
 
+echo "Building ENV"
+
+docker compose down
+docker compose up --build -d

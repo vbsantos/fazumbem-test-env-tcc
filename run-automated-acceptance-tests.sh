@@ -1,4 +1,7 @@
 #!/bin/bash
 
-echo "RUNNING E2E CYPRESS TESTS"
+echo "Running E2E Cypress tests"
 
+cd acceptance-tests/
+npm install
+npm run start
