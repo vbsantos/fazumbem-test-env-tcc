@@ -9,6 +9,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "cypress": "^12.1.0"
+    "cypress": "^12.1.0",
+    "cypress-maildev": "^1.2.0"
   }
 }

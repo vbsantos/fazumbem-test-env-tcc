@@ -26,6 +26,8 @@ services:
       POSTGRES_PASSWORD: ${POSTGRES_PASSWORD}
       EMAIL_USER: ${EMAIL_USER}
       EMAIL_PASSWORD: ${EMAIL_PASSWORD}
+      EMAIL_HOST: fake-smtp-server-tcc
+      EMAIL_PORT: 1025
 
   frontend-tcc:
     image: vbsantos-tcc/frontend:latest
@@ -37,3 +39,13 @@ services:
       - "3000:3000"
     environment:
       API_URL: http://backend-tcc:8080/
+
+  fake-smtp-server-tcc:
+    image: maildev/maildev
+    container_name: fake-smtp-server-tcc
+    restart: unless-stopped
+    depends_on:
+      - frontend-tcc
+    ports:
+      - "1025:1025"
+      - "1080:1080"

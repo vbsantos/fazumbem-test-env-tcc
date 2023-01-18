@@ -38,6 +38,8 @@ describe("Register", () => {
 
     cy.url().should("include", "/login");
     cy.get('[role="status"]').contains("Acesse o login e entre na sua conta.")
+
+    // TODO: aguarda o email e valida se veio uma senha
   });
 
   it("usuário deve ver uma mensagem de erro quando informa um email já cadastrado", () => {
