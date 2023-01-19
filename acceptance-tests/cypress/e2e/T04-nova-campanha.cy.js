@@ -21,6 +21,7 @@ describe("Formulário de Criação de Campanha", () => {
     })
 
     // Envia
+    cy.get('button[type="submit"]').should('not.be.disabled');
     cy.get('button[type="submit"]').click();
 
     // Testa
@@ -37,6 +38,7 @@ describe("Formulário de Criação de Campanha", () => {
     })
 
     // Envia
+    cy.get('button[type="submit"]').should('not.be.disabled');
     cy.get('button[type="submit"]').click();
 
     // Testa

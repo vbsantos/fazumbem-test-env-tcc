@@ -1,19 +1,18 @@
-const { afterEach } = require("mocha");
-
 describe("Formulário de Edição de Instituição", () => {
 
   beforeEach(() => {
     cy.login()
   })
 
-  afterEach(() => {
-    // Atualiza a fixture com os dados da instituição
-    cy.window().then((win) => {
-      const currentUserJson = win.localStorage.getItem('currentUser')
-      const currentUser = JSON.parse(currentUserJson)
-      cy.saveAtFixture('currentUser', currentUser)
-    })
-  })
+  // afterEach(() => {
+  //   FIXME: não tá funcionando como deveria
+  //   // Atualiza a fixture com os dados da instituição
+  //   cy.window().then((win) => {
+  //     const currentUserJson = win.localStorage.getItem('currentUser')
+  //     const currentUser = JSON.parse(currentUserJson)
+  //     cy.saveAtFixture('currentUser', currentUser)
+  //   })
+  // })
 
   it("usuário deve conseguir editar a instituição", () => {
     cy.loadFixture("currentUser").then(({user}) => {
