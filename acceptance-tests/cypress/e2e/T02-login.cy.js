@@ -1,8 +1,11 @@
-describe("Login", () => {
-  it("usuário deve ver uma mensagem de erro quando informa dados incorretos", () => {
-    cy.visit("/login");
+describe("Formulário de Login", () => {
 
-    cy.get('input[name="email"]').type("vbsanttos@gmail.com");
+  beforeEach(() => {
+    cy.visit("/login");
+  })
+
+  it("usuário deve ver uma mensagem de erro quando informa dados incorretos", () => {
+    cy.get('input[name="email"]').type("email-teste@gmail.com");
     cy.get('input[name="password"]').type("12345678");
 
     cy.get("button[type='submit']").click();
@@ -11,12 +14,11 @@ describe("Login", () => {
   });
 
   it("usuário deve ser capaz de logar com sucesso", () => {
-    cy.visit("/login");
-
-    cy.get('input[name="email"]').type("vbsanttos@gmail.com");
-    cy.getPasswordFromEmail().then((passwordReceivedFromEmail) => {
-      cy.get('input[name="password"]').type(passwordReceivedFromEmail);
+    cy.get('input[name="email"]').type("email-teste@gmail.com");
+    cy.getPassword().then((password) => {
+      cy.get('input[name="password"]').type(password);
     })
+
     cy.get("button[type='submit']").click();
 
     cy.url().should("include", "/institui%C3%A7%C3%A3o");

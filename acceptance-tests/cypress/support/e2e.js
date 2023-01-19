@@ -16,9 +16,11 @@
 // Import commands.js using ES2015 syntax:
 import './commands'
 
+require('cypress-file-upload');
+
 require('cypress-maildev');
 
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-Cypress.config("baseUrl", "http://localhost:3000");
+Cypress.config("baseUrl", "http://localhost:4000");

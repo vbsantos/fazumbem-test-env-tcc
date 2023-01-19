@@ -10,6 +10,7 @@
   "license": "ISC",
   "dependencies": {
     "cypress": "^12.1.0",
+    "cypress-file-upload": "^5.0.8",
     "cypress-maildev": "^1.2.0"
   }
 }

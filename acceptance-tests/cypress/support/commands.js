@@ -39,7 +39,8 @@ Cypress.Commands.add('localStorageSetItem', (key, value) => localStorage.setItem
 
 // LOGIN/LOGOUT
 
-Cypress.Commands.add('login', () => cy.loadFixture('currentUser').then((data) => cy.localStorageSetItem('currentUser', JSON.strigify(data))))
+Cypress.Commands.add('login', () => cy.loadFixture('currentUser').then((data) => cy.localStorageSetItem('currentUser', JSON.stringify(data, null, 2))))
+Cypress.Commands.add('getUserId', () => cy.loadFixture('currentUser').then((data) => data.user.idUser))
 Cypress.Commands.add('logout', () => cy.localStorageRemoveItem('currentUser'))
 
 // EMAIL PASSWORD
