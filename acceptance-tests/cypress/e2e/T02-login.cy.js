@@ -5,18 +5,20 @@ describe("Formulário de Login", () => {
   })
 
   it("usuário deve ver uma mensagem de erro quando informa dados incorretos", () => {
-    cy.get('input[name="email"]').type("email-teste@gmail.com");
-    cy.get('input[name="password"]').type("12345678");
+    cy.getLoginData().then((login) => {
+      cy.get('input[name="email"]').type(login.email);
+    })
+    cy.get('input[name="password"]').type("senha-errada");
 
     cy.get("button[type='submit']").click();
 
-    cy.get('[role="status"]').contains("Verifique seus dados e tente novamente");
+    cy.get('[role="status"]').should("contain", "Verifique seus dados e tente novamente");
   });
 
-  it("usuário deve ser capaz de logar com sucesso", () => {
-    cy.get('input[name="email"]').type("email-teste@gmail.com");
-    cy.getPassword().then((password) => {
-      cy.get('input[name="password"]').type(password);
+  it("usuário deve ser capaz de logar com sucesso e armazenar o token no seu localStorage", () => {
+    cy.getLoginData().then((login) => {
+      cy.get('input[name="email"]').type(login.email);
+      cy.get('input[name="password"]').type(login.password);
     })
 
     cy.get("button[type='submit']").click();
@@ -25,9 +27,12 @@ describe("Formulário de Login", () => {
 
     cy.window().then((win) => {
       const currentUserJson = win.localStorage.getItem('currentUser')
+      console.log("🚀 ~ file: T02-login.cy.js:32 ~ cy.window ~ currentUserJson", currentUserJson)
+
       expect(currentUserJson).to.be.a('string').that.is.not.empty
 
       const currentUser = JSON.parse(currentUserJson)
+      console.log("🚀 ~ file: T02-login.cy.js:36 ~ cy.window ~ currentUser", currentUser)
 
       expect(currentUser).to.have.property('token')
       expect(currentUser.token).to.be.a('string').that.is.not.empty

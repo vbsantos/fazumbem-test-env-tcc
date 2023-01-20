@@ -26,6 +26,6 @@ describe("Formulário de Edição de Instituição", () => {
 
     cy.get("button[type='submit']").click();
 
-    cy.get('[role="alert"]').contains("Atualizado com sucesso!")
+    cy.get('[role="alert"]').should("contain", "Atualizado com sucesso!")
   });
 });

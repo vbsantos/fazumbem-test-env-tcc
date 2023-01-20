@@ -12,11 +12,15 @@
 | X (T06) | Ver campanha | /campanhas/:id?viewinfo |
 | X (T07) | Editar campanha | /campanhas/:id |
 | X (T08) | Excluir campanha | /campanhas/:id |
-| X (T09) | Ver detalhes de instituição | /institute/:id |
-| X (T10) | Logout | /logout |
-| X | Sobre | /about |
-| X | Contato | /contact |
-| - | Ver instituições | /institutes |
+| X (T09) | Logout | /logout |
+| X (T10) | Recuperação de Senha | /login |
+| X (T11) | Contato | /contact |
+| X (T12) | Sobre | /about |
+
+| - | Ver instituições (não autenticado) | /institutes |
+| - | Ver campanhas (não autenticado) | /campaigns |
 | - | Ver detalhes de campanha | /campaign/:id |
+
+| ? (não é possível ir direto para a url, precisa ser clicando) | Ver detalhes de instituição | /institute/:id |
 | ? (a página não existe) | Termos de uso | /termo.html |
 

@@ -25,7 +25,7 @@ describe("Formulário de Criação de Campanha", () => {
     cy.get('button[type="submit"]').click();
 
     // Testa
-    cy.get('[role="alert"]').contains("Selecione um arquivo!")
+    cy.get('[role="alert"]').should("contain", "Selecione um arquivo!")
   });
 
   it("usuário deve conseguir criar uma campanha", () => {
@@ -48,6 +48,6 @@ describe("Formulário de Criação de Campanha", () => {
 
     // FIXME: algum problema na maneira que o upload da imagem é feito
     // da erro na request e não mostra o elemento abaixo
-    // cy.get('[role="alert"]').contains("Campanha cadastrada com sucesso!")
+    // cy.get('[role="alert"]').should("contain", "Campanha cadastrada com sucesso!")
   });
 });

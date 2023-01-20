@@ -45,11 +45,21 @@ Cypress.Commands.add('logout', () => cy.localStorageRemoveItem('currentUser'))
 
 // EMAIL PASSWORD
 
-Cypress.Commands.add('getPassword', () => {
-  return cy.maildevGetLastMessage().then((message) => {
-    const regex = /Senha : (.+?)<\/p>/i;
-    const match = message.html.match(regex);
-    const password = match[1].trim();
-    return password;
-  })
+Cypress.Commands.add('setLoginData', (email, password) => {
+  cy.writeFile(`cypress/fixtures/login.json`, { email, password })
+})
+
+Cypress.Commands.add('getLoginData', () => cy.fixture("login"))
+
+Cypress.Commands.add('getLoginDataFromEmail', (message) => {
+    const regexEmail = /Email : (.+?)<\/p>/i;
+    const regexPassword = /Senha : (.+?)<\/p>/i;
+
+    const matchEmail = message.html.match(regexEmail);
+    const matchPassword = message.html.match(regexPassword);
+
+    const email = matchEmail[1].trim();
+    const password = matchPassword[1].trim();
+
+    return { email, password };
 })
