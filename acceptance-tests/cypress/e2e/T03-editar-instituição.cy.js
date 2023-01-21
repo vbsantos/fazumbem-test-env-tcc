@@ -15,14 +15,16 @@ describe("Formulário de Edição de Instituição", () => {
   // })
 
   it("usuário deve conseguir editar a instituição", () => {
-    cy.loadFixture("currentUser").then(({user}) => {
+    cy.fixture("currentUser").then(({user}) => {
       cy.visit(`/instituição/${user.idUser}`);
     })
 
-    cy.get('input[name="address.district"]').type("Camobi");
-    cy.get('textArea[name="openHours"]').type("08:00 - 12:00 / 13:30 - 17:30");
-    cy.get('textArea[name="description"]').type("Descrição");
-    cy.get('textArea[name="bankAccount"]').type("Conta: euaheuahe / Agencia: auheuaheuah");
+    cy.fixture("institute").then((institute) => {
+      cy.get('input[name="address.district"]').type(institute.address.district);
+      cy.get('textArea[name="openHours"]').type(institute.openHours);
+      cy.get('textArea[name="description"]').type(institute.description);
+      cy.get('textArea[name="bankAccount"]').type(institute.bankAccount);
+    })
 
     cy.get("button[type='submit']").click();
 
