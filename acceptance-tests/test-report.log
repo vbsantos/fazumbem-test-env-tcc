@@ -1,0 +1,715 @@
+
+> acceptance-tests@1.0.0 start
+> cypress run --headless
+
+
+====================================================================================================
+
+  (Run Starting)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Cypress:        12.1.0                                                                         │
+  │ Browser:        Electron 106 (headless)                                                        │
+  │ Node Version:   v16.19.0 (/home/voalle/.nvm/versions/node/v16.19.0/bin/node)                   │
+  │ Specs:          17 found (T01-register.cy.js, T02-login.cy.js, T03-editar-instituição.cy.js, T │
+  │                 04-nova-campanha.cy.js, T05-campanhas.cy.js, T06-ver-campanha.cy.js, T07-edita │
+  │                 r-campanha.cy.js, T08-excluir-campanha.cy.js, T09-logout.cy.js, T10-recuperaca │
+  │                 o-de-senha.cy.js, T11-c...)                                                    │
+  │ Searched:       cypress/e2e/**/*.cy.{js,jsx,ts,tsx}                                            │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T01-register.cy.js                                                             (1 of 17)
+
+
+  Formulário de Registro
+    ✓ usuário não-autenticado deve ver uma mensagem de erro quando não informa um campo obrigatório (3541ms)
+    ✓ usuário não-autenticado deve ser capaz de se registrar com sucesso ao informar todos os campos obrigatórios (4624ms)
+    ✓ usuário não-autenticado deve ver uma mensagem de erro quando informa um email já cadastrado (3906ms)
+
+
+  3 passing (14s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        3                                                                                │
+  │ Passing:      3                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     13 seconds                                                                       │
+  │ Spec Ran:     T01-register.cy.js                                                               │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc     (1 second)
+                          eptance-tests/cypress/videos/T01-register.cy.js.mp4                       
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T02-login.cy.js                                                                (2 of 17)
+
+
+  Formulário de Login
+    ✓ usuário não-autenticado deve ver uma mensagem de erro quando informa dados incorretos (2281ms)
+    ✓ usuário não-autenticado deve ser capaz de logar com sucesso e armazenar o token no seu localStorage (1412ms)
+
+
+  2 passing (5s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     5 seconds                                                                        │
+  │ Spec Ran:     T02-login.cy.js                                                                  │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T02-login.cy.js.mp4                          
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T03-editar-instituição.cy.js                                                   (3 of 17)
+
+
+  Formulário de Edição de Instituição
+    ✓ usuário deve conseguir editar a instituição (2811ms)
+
+
+  1 passing (4s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     4 seconds                                                                        │
+  │ Spec Ran:     T03-editar-instituição.cy.js                                                     │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T03-editar-instituição.cy.js.m               
+                          p4                                                                        
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T04-nova-campanha.cy.js                                                        (4 of 17)
+
+
+  Formulário de Criação de Campanha
+    ✓ usuário não deve conseguir criar uma campanha sem um dos campos obrigatórios (3056ms)
+    ✓ usuário deve conseguir criar uma campanha (3443ms)
+
+
+  2 passing (8s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     7 seconds                                                                        │
+  │ Spec Ran:     T04-nova-campanha.cy.js                                                          │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T04-nova-campanha.cy.js.mp4                  
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T05-campanhas.cy.js                                                            (5 of 17)
+
+
+  Lista de Campanhas da Instituição
+    ✓ usuário deve conseguir ver a campanha criada (1025ms)
+
+
+  1 passing (2s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     2 seconds                                                                        │
+  │ Spec Ran:     T05-campanhas.cy.js                                                              │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T05-campanhas.cy.js.mp4                      
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T06-ver-campanha.cy.js                                                         (6 of 17)
+
+
+  Ver 'Mais Informações' de uma Campanha criada
+    ✓ usuário deve conseguir ir para a página com mais informações sobre uma Campanha (1129ms)
+
+
+  1 passing (3s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     2 seconds                                                                        │
+  │ Spec Ran:     T06-ver-campanha.cy.js                                                           │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T06-ver-campanha.cy.js.mp4                   
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T07-editar-campanha.cy.js                                                      (7 of 17)
+
+
+  Clicar na ação 'Editar' de uma Campanha criada
+    ✓ usuário deve conseguir ir para a página de edição da Campanha (1116ms)
+
+
+  1 passing (3s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     2 seconds                                                                        │
+  │ Spec Ran:     T07-editar-campanha.cy.js                                                        │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T07-editar-campanha.cy.js.mp4                
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T08-excluir-campanha.cy.js                                                     (8 of 17)
+
+
+  Clicar na ação 'Deletar' de uma Campanha criada
+    ✓ usuário deve receber um modal de confirmação ao clicar na ação 'Deletar' (1081ms)
+
+
+  1 passing (2s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     2 seconds                                                                        │
+  │ Spec Ran:     T08-excluir-campanha.cy.js                                                       │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T08-excluir-campanha.cy.js.mp4               
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T09-logout.cy.js                                                               (9 of 17)
+
+
+  Logout
+    ✓ usuário deve conseguir fazer logout (614ms)
+
+
+  1 passing (2s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     2 seconds                                                                        │
+  │ Spec Ran:     T09-logout.cy.js                                                                 │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T09-logout.cy.js.mp4                         
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T10-recuperacao-de-senha.cy.js                                                (10 of 17)
+
+
+  Recuperação de Senha
+    ✓ usuário não-autenticado deve ser capaz de recuparar a senha usando o email (1648ms)
+
+
+  1 passing (3s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     3 seconds                                                                        │
+  │ Spec Ran:     T10-recuperacao-de-senha.cy.js                                                   │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T10-recuperacao-de-senha.cy.js               
+                          .mp4                                                                      
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T11-contact.cy.js                                                             (11 of 17)
+
+
+  Página 'Contato'
+    ✓ usuário não-autenticado deve conseguir ver a página 'Contato' (396ms)
+    ✓ usuário não-autenticado deve conseguir enviar um email pelo formulário de contato (2901ms)
+
+
+  2 passing (5s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     4 seconds                                                                        │
+  │ Spec Ran:     T11-contact.cy.js                                                                │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T11-contact.cy.js.mp4                        
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T12-about.cy.js                                                               (12 of 17)
+
+
+  Página 'Sobre'
+    ✓ usuário não-autenticado deve conseguir ver a página 'Sobre' (439ms)
+
+
+  1 passing (2s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        1                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     1 second                                                                         │
+  │ Spec Ran:     T12-about.cy.js                                                                  │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T12-about.cy.js.mp4                          
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T13-campaigns.cy.js                                                           (13 of 17)
+
+
+  Listagem das Campanhas
+    ✓ usuário não-autenticado deve ver a página com as Campanhas da plataforma (1711ms)
+    ✓ usuário não-autenticado deve ver todas as Campanhas cadastradas na plataforma (753ms)
+
+
+  2 passing (4s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     3 seconds                                                                        │
+  │ Spec Ran:     T13-campaigns.cy.js                                                              │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T13-campaigns.cy.js.mp4                      
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T14-campaign-id.cy.js                                                         (14 of 17)
+
+
+  Página com detalhes da Instituição
+    1) usuário não-autenticado deve conseguir ver a página com os detalhes da campanha indo direto para a URL
+    ✓ usuário não-autenticado deve conseguir ver a página com os detalhes da instituição (865ms)
+
+
+  1 passing (4s)
+  1 failing
+
+  1) Página com detalhes da Instituição
+       usuário não-autenticado deve conseguir ver a página com os detalhes da campanha indo direto para a URL:
+     TypeError: The following error originated from your application code, not from Cypress.
+
+  > Cannot convert undefined or null to object
+
+When Cypress detects uncaught errors originating from your application it will automatically fail the current test.
+
+This behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.
+
+https://on.cypress.io/uncaught-exception-from-application
+      at Function.entries (<anonymous>)
+      at <unknown> (http://localhost:4000/static/js/main.f7f14b79.chunk.js:1:54938)
+      at Nc (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:408654)
+      at t.unstable_runWithPriority (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:426467)
+      at Uo (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:348825)
+      at Rc (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:408115)
+      at mc (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:399572)
+      at <unknown> (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:349048)
+      at t.unstable_runWithPriority (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:426467)
+      at Uo (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:348825)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  1                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     3 seconds                                                                        │
+  │ Spec Ran:     T14-campaign-id.cy.js                                                            │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acceptance-tests/cypress     (1280x720)
+     /screenshots/T14-campaign-id.cy.js/Página com detalhes da Instituição -- usuário               
+      não-autenticado deve conseguir ver a página com os detalhes da campanha indo di               
+     reto para a URL (failed).png                                                                   
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T14-campaign-id.cy.js.mp4                    
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T15-institutes.cy.js                                                          (15 of 17)
+
+
+  Listagem das Instituições
+    ✓ usuário não-autenticado deve ver a página com as Instituições da plataforma (1143ms)
+    ✓ usuário não-autenticado deve ver todas as Instituições cadastradas na plataforma (455ms)
+
+
+  2 passing (3s)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                                │
+  │ Passing:      2                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     2 seconds                                                                        │
+  │ Spec Ran:     T15-institutes.cy.js                                                             │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T15-institutes.cy.js.mp4                     
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T16-institute-id.cy.js                                                        (16 of 17)
+
+
+  Página com detalhes da Instituição
+    1) usuário não-autenticado deve conseguir ver a página com os detalhes da instituição indo direto para a URL
+    ✓ usuário não-autenticado deve conseguir ver a página com os detalhes da instituição (734ms)
+
+
+  1 passing (4s)
+  1 failing
+
+  1) Página com detalhes da Instituição
+       usuário não-autenticado deve conseguir ver a página com os detalhes da instituição indo direto para a URL:
+     TypeError: The following error originated from your application code, not from Cypress.
+
+  > Cannot convert undefined or null to object
+
+When Cypress detects uncaught errors originating from your application it will automatically fail the current test.
+
+This behavior is configurable, and you can choose to turn this off by listening to the `uncaught:exception` event.
+
+https://on.cypress.io/uncaught-exception-from-application
+      at Function.entries (<anonymous>)
+      at <unknown> (http://localhost:4000/static/js/main.f7f14b79.chunk.js:1:77660)
+      at Nc (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:408654)
+      at t.unstable_runWithPriority (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:426467)
+      at Uo (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:348825)
+      at Rc (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:408115)
+      at mc (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:399572)
+      at <unknown> (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:349048)
+      at t.unstable_runWithPriority (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:426467)
+      at Uo (http://localhost:4000/static/js/2.ddf358fb.chunk.js:2:348825)
+
+
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        2                                                                                │
+  │ Passing:      1                                                                                │
+  │ Failing:      1                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  1                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     4 seconds                                                                        │
+  │ Spec Ran:     T16-institute-id.cy.js                                                           │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Screenshots)
+
+  -  /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acceptance-tests/cypress     (1280x720)
+     /screenshots/T16-institute-id.cy.js/Página com detalhes da Instituição -- usuári               
+     o não-autenticado deve conseguir ver a página com os detalhes da instituição ind               
+     o direto para a URL (failed).png                                                               
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T16-institute-id.cy.js.mp4                   
+
+
+────────────────────────────────────────────────────────────────────────────────────────────────────
+                                                                                                    
+  Running:  T17-termo.cy.js                                                               (17 of 17)
+
+
+  0 passing (1ms)
+
+
+  (Results)
+
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ Tests:        0                                                                                │
+  │ Passing:      0                                                                                │
+  │ Failing:      0                                                                                │
+  │ Pending:      0                                                                                │
+  │ Skipped:      0                                                                                │
+  │ Screenshots:  0                                                                                │
+  │ Video:        true                                                                             │
+  │ Duration:     0 seconds                                                                        │
+  │ Spec Ran:     T17-termo.cy.js                                                                  │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+
+
+  (Video)
+
+  -  Started processing:  Compressing to 32 CRF                                                     
+  -  Finished processing: /home/voalle/Área de Trabalho/TCC/fazumbem-test-env-tcc/acc    (0 seconds)
+                          eptance-tests/cypress/videos/T17-termo.cy.js.mp4                          
+
+
+====================================================================================================
+
+  (Run Finished)
+
+
+       Spec                                              Tests  Passing  Failing  Pending  Skipped  
+  ┌────────────────────────────────────────────────────────────────────────────────────────────────┐
+  │ ✔  T01-register.cy.js                       00:13        3        3        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  T02-login.cy.js                          00:05        2        2        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  T03-editar-instituição.cy.js             00:04        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  T04-nova-campanha.cy.js                  00:07        2        2        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  T05-campanhas.cy.js                      00:02        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  T06-ver-campanha.cy.js                   00:02        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  T07-editar-campanha.cy.js                00:02        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  T08-excluir-campanha.cy.js               00:02        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  T09-logout.cy.js                         00:02        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  T10-recuperacao-de-senha.cy.js           00:03        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  T11-contact.cy.js                        00:04        2        2        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  T12-about.cy.js                          00:01        1        1        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  T13-campaigns.cy.js                      00:03        2        2        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✖  T14-campaign-id.cy.js                    00:03        2        1        1        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  T15-institutes.cy.js                     00:02        2        2        -        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✖  T16-institute-id.cy.js                   00:04        2        1        1        -        - │
+  ├────────────────────────────────────────────────────────────────────────────────────────────────┤
+  │ ✔  T17-termo.cy.js                            1ms        -        -        -        -        - │
+  └────────────────────────────────────────────────────────────────────────────────────────────────┘
+    ✖  2 of 17 failed (12%)                     01:08       25       23        2        -        -  
+

@@ -1,6 +1,7 @@
 describe("Página 'Contato'", () => {
 
   beforeEach(() => {
+    cy.logout()
     cy.visit("/contact");
   })
 

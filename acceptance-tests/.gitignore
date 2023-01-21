@@ -1,6 +1,6 @@
 # Cypress binary
-cypress/videos/
-cypress/screenshots/
+# cypress/videos/
+# cypress/screenshots/
 
 # Cypress cache
 .cache/

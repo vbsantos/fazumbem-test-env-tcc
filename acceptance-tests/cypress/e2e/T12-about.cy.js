@@ -1,6 +1,7 @@
 describe("Página 'Sobre'", () => {
 
   beforeEach(() => {
+    cy.logout()
     cy.visit("/about");
   })
 

@@ -1,6 +1,7 @@
 describe("Formulário de Registro", () => {
 
   before(() => {
+    cy.logout()
     cy.maildevDeleteAllMessages();
   })
 
