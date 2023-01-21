@@ -6,7 +6,7 @@ describe("Listagem das Instituições", () => {
     cy.visit("/institutes");
   })
 
-  it("usuário deve ver a página com as Instituições da plataforma", () => {
+  it("usuário não-autenticado deve ver a página com as Instituições da plataforma", () => {
     cy.get('[id="root"]')
       .should('contain', 'Conheça as instituições participantes da plataforma Faz um Bem!')
       .find('h2')
@@ -14,7 +14,7 @@ describe("Listagem das Instituições", () => {
       .should('contain', "participantes")
   });
 
-  it("usuário deve ver todas as Instituições cadastradas na plataforma", () => {
+  it("usuário não-autenticado deve ver todas as Instituições cadastradas na plataforma", () => {
     cy.fixture("users").then((institute) => {
       cy.get('[class^="Institutes_card"]')
         .should('contain', institute.name)

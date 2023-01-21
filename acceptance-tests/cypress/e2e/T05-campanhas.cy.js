@@ -2,6 +2,7 @@ describe("Lista de Campanhas da Instituição", () => {
 
   beforeEach(() => {
     cy.login()
+
     cy.visit("/")
     cy.getUserId().then((id) => {
       cy.visit(`/instituição/${id}`);

@@ -4,14 +4,14 @@ describe("Página 'Contato'", () => {
     cy.visit("/contact");
   })
 
-  it("usuário deve conseguir ver a página 'Contato'", () => {
+  it("usuário não-autenticado deve conseguir ver a página 'Contato'", () => {
     cy.get('[id="root"]')
       .should('contain', 'Possui dúvidas, sugestões ou mensagens para compartilhar? Abaixo você pode entrar em contato com a plataforma Faz um Bem!')
       .find('h2')
       .should('contain', "Contato")
   });
 
-  it("usuário deve conseguir enviar um email pelo formulário de contato", () => {
+  it("usuário não-autenticado deve conseguir enviar um email pelo formulário de contato", () => {
     cy.fixture("contact").then((form) => {
       cy.get('input[id="subject"]').type(form.subject);
       cy.get('textarea[id="message"]').type(form.message);

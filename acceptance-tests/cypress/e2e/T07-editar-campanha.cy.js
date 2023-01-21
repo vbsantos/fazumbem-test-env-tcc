@@ -1,10 +1,8 @@
 describe("Clicar na ação 'Editar' de uma Campanha criada", () => {
 
   beforeEach(() => {
-    // Insere token no localStorage
     cy.login()
 
-    // Faz caminho padrão pra ser reconhecido pelo useHistory
     cy.visit("/")
     cy.getUserId().then((id) => {
       cy.visit(`/instituição/${id}`);

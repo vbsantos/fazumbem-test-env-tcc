@@ -4,7 +4,7 @@ describe("Logout", () => {
     cy.login()
   })
 
-  it("usuário deve conseguir editar a instituição", () => {
+  it("usuário deve conseguir fazer logout", () => {
     cy.loadFixture("currentUser").then(({user}) => {
       cy.visit(`/instituição/${user.idUser}`);
     })

@@ -5,25 +5,27 @@ describe("Página com detalhes da Instituição", () => {
     cy.visit("/")
   })
 
-  it("usuário deve conseguir ver a página com os detalhes da instituição sem estar logado", () => {
+  it("usuário não-autenticado deve conseguir ver a página com os detalhes da instituição indo direto para a URL", () => {
     cy.getUserId().then((id) => {
       cy.visit(`/institute/${id}`);
     })
+
     cy.fixture("currentUser").then(({user}) => {
       cy.get("h2").should("contain", user.name)
       cy.get('[id="insituteDescription"]').should("include", user.description)
     })
   });
 
-  it("usuário deve conseguir ver a página com os detalhes da instituição sem estar logado", () => {
+  it("usuário não-autenticado deve conseguir ver a página com os detalhes da instituição", () => {
     cy.visit("/institutes");
+
     cy.get('[class^="Institutes_card"]')
       .find('button[type="button"]')
       .click()
 
-      cy.getUserId().then((id) => {
-        cy.url().should("include", `/institute/${id}`);
-      })
+    cy.getUserId().then((id) => {
+      cy.url().should("include", `/institute/${id}`);
+    })
 
     cy.fixture("currentUser").then((institute) => {
       cy.get("h2").should("contain", institute.user.name)

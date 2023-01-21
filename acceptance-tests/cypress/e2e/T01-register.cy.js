@@ -8,7 +8,7 @@ describe("Formulário de Registro", () => {
     cy.visit("/register");
   })
 
-  it("usuário deve ver uma mensagem de erro quando não informa um campo obrigatório", () => {
+  it("usuário não-autenticado deve ver uma mensagem de erro quando não informa um campo obrigatório", () => {
     cy.loadFixture("users").then((user) => {
       cy.get('input[name="cpf"]').type(user.cpf);
       cy.get('input[name="name"]').type(user.name);
@@ -28,7 +28,7 @@ describe("Formulário de Registro", () => {
     cy.get('[role="alert"]').should("contain", "Campo obrigatório")
   });
 
-  it("usuário deve ser capaz de se registrar com sucesso ao informar todos os campos obrigatórios", () => {
+  it("usuário não-autenticado deve ser capaz de se registrar com sucesso ao informar todos os campos obrigatórios", () => {
     cy.loadFixture("users").then((user) => {
       cy.get('input[name="cpf"]').type(user.cpf);
       cy.get('input[name="name"]').type(user.name);
@@ -57,7 +57,7 @@ describe("Formulário de Registro", () => {
     });
   });
 
-  it("usuário deve ver uma mensagem de erro quando informa um email já cadastrado", () => {
+  it("usuário não-autenticado deve ver uma mensagem de erro quando informa um email já cadastrado", () => {
     cy.loadFixture("users").then((user) => {
       cy.get('input[name="cpf"]').type(user.cpf);
       cy.get('input[name="name"]').type(user.name);
@@ -71,7 +71,6 @@ describe("Formulário de Registro", () => {
       cy.get('select[name="state"]').select(user.state);
       cy.get('input[name="city"]').type(user.city);
     })
-    // TODO: cy.fillForm("user1")
 
     cy.get("button[type='submit']").click();
 

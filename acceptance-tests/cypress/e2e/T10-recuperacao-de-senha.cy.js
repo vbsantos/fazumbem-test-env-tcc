@@ -5,10 +5,11 @@ describe("Recuperação de Senha", () => {
   })
 
   beforeEach(() => {
+    cy.logout()
     cy.visit("/login");
   })
 
-  it("usuário deve ser capaz de recuparar a senha usando o email", () => {
+  it("usuário não-autenticado deve ser capaz de recuparar a senha usando o email", () => {
     cy.get("p").contains("Esqueci minha senha").click()
 
     cy.getLoginData().then((login) => {
