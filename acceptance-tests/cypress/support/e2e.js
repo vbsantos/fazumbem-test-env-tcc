@@ -23,4 +23,4 @@ require('cypress-maildev');
 // Alternatively you can use CommonJS syntax:
 // require('./commands')
 
-Cypress.config("baseUrl", "http://localhost:4000");
+Cypress.config("baseUrl", "http://localhost:3000");
