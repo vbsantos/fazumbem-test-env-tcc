@@ -25,5 +25,5 @@ apt install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3
 
 echo "Building ENV"
 
-docker-compose down --volumes
-docker-compose up --build -d
+docker compose down --volumes
+docker compose up --build -d
