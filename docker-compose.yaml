@@ -44,8 +44,6 @@ services:
     image: maildev/maildev
     container_name: fake-smtp-server-tcc
     restart: unless-stopped
-    depends_on:
-      - frontend-tcc
     ports:
       - "1025:1025"
       - "1080:1080"
