@@ -21,7 +21,9 @@ if [[ -z $(docker images | grep "vbsantos-tcc/backend") ]]; then
 fi
 
 # install cypress required libs
-# apt install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb npm -y
+apt update -y
+apt install libgtk2.0-0 libgtk-3-0 libgbm-dev libnotify-dev libgconf-2-4 libnss3 libxss1 libasound2 libxtst6 xauth xvfb -y
+apt install npm -y
 
 echo "Building ENV"
 
