@@ -28,6 +28,8 @@ services:
       EMAIL_PASSWORD: ${EMAIL_PASSWORD}
       EMAIL_HOST: fake-smtp-server-tcc
       EMAIL_PORT: 1025
+      JWT_HEADER: Authorization
+      JWT_SECRET: fazumbem
 
   frontend-tcc:
     image: vbsantos-tcc/frontend:latest
