@@ -2,4 +2,4 @@
 
 echo "Cleaning ENV"
 
-docker-compose down --volumes
+docker compose down --volumes
