@@ -38,7 +38,7 @@ services:
     ports:
       - "3000:3000"
     environment:
-      API_URL: http://backend-tcc:8000/
+      REACT_API_URL: http://backend-tcc:8000/
 
   fake-smtp-server-tcc:
     image: maildev/maildev
